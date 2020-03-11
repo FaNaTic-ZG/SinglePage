@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="simplegrid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <title>SinglePage</title>
+</head>
+<body>
+
+    <!-- NAVIGACIJA -->
+    <div id="navigacija" class="oxanium">
+        <div class="grid grid-pad">
+
+            <div class="col-3-12">
+
+                <a href="#">HOME</a>
+
+            </div>
+
+            <div class="col-3-12">
+
+                <a href="#contact">CONTACT</a>
+
+            </div>
+
+            <div class="col-3-12">
+
+                <a href="#aboutus">ABOUT US</a>
+
+            </div>
+
+            <div class="col-3-12">
+
+                <a href="#slideshow">GALLERY</a>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MOBILNA NAVIGACIJA -->
+    <div id="mobilna-navigacija">
+        <div class="grid grid-pad">
+
+            <div class="mobile-col-1-1" onclick="closeNav()" >
+
+                <span style="cursor:pointer;" onclick="openNav()">&#9776; MENU</span>
+
+                <div id="mySidenav" class="sidenav" onclick="event.stopPropagation();">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#" onclick="closeNav()">HOME</a>
+                    <a href="#contact" onclick="closeNav()">CONTACT</a>
+                    <a href="#aboutus" onclick="closeNav()">ABOUT US</a>
+                    <a href="#slideshow" onclick="closeNav()">GALLERY</a>
+                </div>
+    
+                <script>
+                    function openNav() {
+                        event.stopPropagation();
+                        document.getElementById("mySidenav").style.width = "100%";
+                    }
+                      
+                    function closeNav() {
+                        document.getElementById("mySidenav").style.width = "0";
+                    }
+                </script>
+                    
+            </div>
+
+        </div>
+    </div>
+
+
+    
+    <!-- SECTION -->
+    <div id="section">
+
+        <div class="grid grid-pad">
+            <div class="col-1-1 mobile-col-1-1" style="padding-top: 20vh; line-height: 0;">
+
+                <h1>GALIAS</h1>
+                <p>customize everything</p>
+                    
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- CIJENE -->
+    <div id="cijene" style="padding-bottom: 20vh;">
+
+        <div class="grid grid-pad" style="padding-top: 20vh;">
+            <div class="col-4-12 mobile-col-1-1" style="padding-bottom: 5vh;">
+
+                <div class="image">
+
+                    <img src="CIJENE/headphones-3683983_1920.jpg" width="100%" height="100%">
+
+                </div>
+                
+                <button class="collapsible oxanium">HEADPHONES</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                
+            </div>
+
+            <div class="col-4-12 mobile-col-1-1" style="padding-bottom: 5vh;">
+
+                <div class="image">
+
+                    <img src="CIJENE/untie-earphone-1894727_1920.jpg" width="100%" height="100%">
+
+                </div>
+                
+                <button class="collapsible oxanium">EARPHONES</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                
+            </div>
+
+            <div class="col-4-12 mobile-col-1-1">
+
+                <div class="image">
+
+                    <img src="CIJENE/fone-4557410_1920.jpg" width="100%" height="100%">
+
+                </div>
+                
+                <button class="collapsible oxanium">EARBUDS</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                
+            </div>
+        </div>
+
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+            
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+            </script>
+
+    </div>
+
+
+
+
+    <!-- FORMA -->
+    <div id="forma" style="padding-bottom: 10vh;">
+
+        <div class="grid grid-pad" style="padding-top: 5vh;">
+            <div class="col-1-1 mobile-col-1-1">
+
+                <div class="contact-section">
+                    <h1>Contact Us</h1>
+                    <i class="fa fa-headphones fa-2x"></i>
+                    <from class="contact-form" action="index.html" method="post">
+                        <input type="text" class="contact-form-text" placeholder="Your name">
+                        <input type="text" class="contact-form-text" placeholder="Your email">
+                        <input type="text" class="contact-form-text" placeholder="Your phone">
+                        <textarea class="contact-form-text" placeholder="Your message"></textarea>
+                        <input type="submit" class="contact-form-btn" value="Send">
+                    </from>
+                </div>
+                    
+            </div>
+        </div>
+
+    </div>
+    
+
+
+    <!-- VIZIJA I MISIJA -->
+    <div id="vizijaimisija" style="padding-bottom: 25vh;">
+
+        <div class="grid grid-pad" style="padding-top: 25vh;">
+            <div class="col-5-12 mobile-col-1-1" id="razmak">
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                          <img src="VIZIJAIMISIJA/vision-2372177_1920.jpg" width="100%" height="100%">
+                          
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>LOREM IPSUM</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue metus et orci consectetur, in finibus tellus posuere. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                      </div>
+                    </div>
+                  </div>
+                    
+            </div>
+
+            <div class="col-2-12 mobile-col-1-1">
+                
+            </div>
+
+            <div class="col-5-12 mobile-col-1-1">
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="VIZIJAIMISIJA/target-1747234_1920.jpg" width="100%" height="100%">
+                          
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>LOREM IPSUM</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue metus et orci consectetur, in finibus tellus posuere. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                      </div>
+                    </div>
+                  </div>
+                    
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- ABOUT US -->
+    <div id="aboutus" style="padding-bottom: 10vh;">
+
+        <div class="grid grid-pad" style="padding-top: 5vh;">
+
+            <div class="mobile-col-1-1" id="aboutusmobile">
+
+                <h1>WHO WE ARE</h1>
+
+            </div>
+
+            <div class="col-8-12 mobile-col-1-1 textleft" style="line-height: 1.5em;">
+
+                <p style="padding-bottom: 2vh;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum odio neque, quis aliquet mi vehicula vel. Donec semper, mi et eleifend rutrum, purus ante mollis ex, nec consequat sem velit vitae tellus. Suspendisse eu congue metus. Duis tincidunt arcu sed metus porttitor dignissim. Integer vestibulum nibh tellus, at placerat risus porttitor luctus. Suspendisse faucibus gravida tellus at congue. Praesent faucibus maximus nulla non commodo. Nullam finibus porttitor nisl, at volutpat neque luctus eu. In eleifend erat in sapien interdum, eget posuere metus elementum. Donec nunc felis, ullamcorper a velit in, bibendum condimentum diam.</p>
+
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/gJOKCtVwI1E"></iframe>
+                    
+            </div>
+
+            <div class="col-1-12 mobile-col-1-1">
+                    
+            </div>
+
+            <div class="col-3-12 textleft" style="padding-top: 20vh; font-size: 7vh; line-height: 0.5em;" id="aboutushide">
+
+                <p>WHO</p>
+                <p>WE</p>
+                <p>ARE</p>
+
+            </div>
+        </div>
+
+        <div class="grid grid-pad">
+            <div class="col-3-12 mobile-col-1-1 textleft lineheight">
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum odio neque, quis aliquet mi vehicula vel. Donec semper, mi et eleifend rutrum, purus ante mollis ex, nec consequat sem velit vitae tellus. Suspendisse eu congue metus.</p>
+                    
+            </div>
+
+            <div class="col-2-12 mobile-col-1-1">
+                    
+            </div>
+
+            <div class="col-3-12 mobile-col-1-1 textleft lineheight">
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum odio neque, quis aliquet mi vehicula vel. Donec semper, mi et eleifend rutrum, purus ante mollis ex, nec consequat sem velit vitae tellus. Suspendisse eu congue metus.</p>
+                    
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- SLIDESHOW -->
+    <div id="slideshow">
+        
+        <div class="container">
+
+            <div class="slider">
+                <div class="slide slide1">
+                    <div class="caption">
+                        <h2>LOREM IPSUM</h2>
+                        <p>Lorem ipsum.</p>
+                    </div>
+                </div>
+
+                <div class="slide slide2">
+                    <div class="caption">
+                        <h2>LOREM IPSUM</h2>
+                        <p>Lorem ipsum.</p>
+                    </div>
+                </div>
+
+                <div class="slide slide3">
+                    <div class="caption">
+                        <h2>LOREM IPSUM</h2>
+                        <p>Lorem ipsum.</p>
+                    </div>
+                </div>
+
+                <div class="slide slide4">
+                    <div class="caption">
+                        <h2>LOREM IPSUM</h2>
+                        <p>Lorem ipsum.</p>
+                    </div>
+                </div>
+
+                <div class="slide slide1">
+                    <div class="caption">
+                        <h2>LOREM IPSUM</h2>
+                        <p>Lorem ipsum.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+
+
+
+    <!-- CONTACT -->
+    <div id="contact">
+
+        <div class="grid grid-pad" style="padding-top: 15vh;">
+            <div class="col-6-12 mobile-col-1-1" style="padding-bottom: 5vh;">
+
+                <a name="contact"><h1 class="oxanium">LOCATION 1</h1></a>
+                <p>Zagreb - Ilica 6b</p>
+                <iframe class="zoom2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11138.483485855651!2d16.068394576472254!3d45.73869757467622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47667ee85c7fab29%3A0x9ef60b3c28e288f6!2sZra%C4%8Dna%20luka%20Franjo%20Tu%C4%91man%20Zagreb!5e0!3m2!1shr!2shr!4v1577026724945!5m2!1shr!2shr" frameborder="0" style="border:0;"  allowfullscreen=""></iframe>
+                    
+            </div>
+
+            <div class="col-6-12 mobile-col-1-1">
+
+                <a name="contact"><h1 class="oxanium">LOCATION 2</h1></a>
+                <p>Zagreb - Ilica 14</p>
+                <iframe class="zoom2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11138.483485855651!2d16.068394576472254!3d45.73869757467622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47667ee85c7fab29%3A0x9ef60b3c28e288f6!2sZra%C4%8Dna%20luka%20Franjo%20Tu%C4%91man%20Zagreb!5e0!3m2!1shr!2shr!4v1577026724945!5m2!1shr!2shr" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    
+            </div>
+        </div>
+
+
+        <div class="grid grid-pad" style="padding-top: 20vh; padding-bottom: 10em;">
+            <div class="col-3-12 mobile-col-6-12" style="padding-bottom: 5vh;">
+
+                <a href="https://www.instagram.com/?hl=hr"><i class="fa fa-instagram fa-5x zoom" aria-hidden="true"></i></a>
+                    
+            </div>
+
+            <div class="col-3-12 mobile-col-6-12" style="padding-bottom: 5vh;">
+
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook-official fa-5x zoom" aria-hidden="true"></i></a>
+                    
+            </div>
+
+            <div class="col-3-12 mobile-col-6-12" style="padding-bottom: 5vh;">
+
+                <a href="https://twitter.com/?lang=hr"><i class="fa fa-twitter-square fa-5x zoom" aria-hidden="true"></i></a>
+                    
+            </div>
+
+            <div class="col-3-12 mobile-col-6-12">
+
+                <a href="https://www.gmail.com/"><i class="fa fa-envelope fa-5x zoom" aria-hidden="true"></i></a>
+                    
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- FOOTER -->
+    <div id="footer" class="oxanium">
+
+        <div class="grid grid-pad" style="padding-top: 15vh; padding-bottom: 5em; padding-right: 20px;">
+            <div class="col-4-12 hide-on-mobile footerborder">
+
+                <p>Lorem ipsum</p>
+                <p>Lorem ipsum</p>
+                <p>Lorem ipsum</p>
+                    
+            </div>
+
+            <div class="col-4-12 mobile-col-1-1" id="borderfootermob">
+
+                <a name="footer"><h1>GALIAS</h1></a>
+
+                <p style="padding-top: 1em; font-weight: bolder;">Contact</p>
+
+                <p>+385 99 406 1231</p>
+                <p>name@mail.com</p>
+
+                <p style="padding-top: 3em; font-weight: bolder;">Social</p>
+
+                <a href="https://www.instagram.com/?hl=hr"><i class="fa fa-instagram zoom" aria-hidden="true" style="padding-right: 0.5em;"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook-official zoom" aria-hidden="true" style="padding-right: 0.5em;"></i></a>
+                <a href="https://twitter.com/?lang=hr"><i class="fa fa-twitter-square zoom" aria-hidden="true" style="padding-right: 0.5em;"></i></a>
+                <a href="https://outlook.live.com/owa/"><i class="fa fa-envelope zoom" aria-hidden="true" style="padding-right: 0.5em;"></i></a>
+                    
+            </div>
+
+            <div class="col-4-12 hide-on-mobile footerborder">
+
+                <p>Lorem ipsum</p>
+                <p>Lorem ipsum</p>
+                <p>Lorem ipsum</p>
+                    
+            </div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
