@@ -581,12 +581,6 @@ body{
 	transition: 0.5s;
 }
 
-.contact-form-text:hover{
-	-ms-transform: scale(1.17);
-	-webkit-transform: scale(1.17); 
-	transform: scale(1.17);
-}
-
 .contact-form-text:focus{
 	box-shadow: 0 0 10px 4px #34495e;
 }
@@ -594,12 +588,6 @@ body{
 textarea.contact-form-text{
 	resize: none;
 	height: 120px;
-}
-
-textarea.contact-form-text:hover{
-	-ms-transform: scale(1.17); 
-	-webkit-transform: scale(1.17); 
-	transform: scale(1.17);
 }
 
 .contact-form-btn{
